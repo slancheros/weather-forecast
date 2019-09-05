@@ -24,7 +24,10 @@ The service from the central perspective received the following parameters:
 2.location ( city name)
 3.units ( metric = °C / imperial = °F )
 
-http://localhost:5000/weather-forecast/openmap/London/metric goes is an example of the call for openmap.
+http://localhost:5000/weather-forecast/openmap/London/metric goes is an example of the call for main service, redirecting to openmap.
+http://localhost:5001/openmap/London/imperial  to invoke directly the openmap service.
+http://localhost:5002/darksky/London/imperial  to invoce directly the darksky service.
+
 
 The only working one is openmap, and I was about to work with darksky, however it was cumbersome to check the daily structure to fit on the defined message. Same work to be performed by each forecast service: to unify according to the service contract described above.
 
